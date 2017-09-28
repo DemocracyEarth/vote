@@ -1,7 +1,7 @@
 pragma solidity ^0.4.4;
-import 'zeppelin-solidity/contracts/token/StandardToken.sol';
+import 'zeppelin-solidity/contracts/token/MintableToken.sol';
 
-contract VoteToken is StandardToken {
+contract VoteToken is MintableToken {
 	string public name = 'Democracy Earth VOTE';
 	string public symbol = 'VOTE';
 	uint public decimals = 4;
