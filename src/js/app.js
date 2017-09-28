@@ -43,10 +43,10 @@ App = {
   handleTransfer: function() {
     event.preventDefault();
 
-    var amount = parseInt($('#TTTransferAmount').val());
-    var toAddress = $('#TTTransferAddress').val();
+    var amount = parseInt($('#VOTETransferAmount').val());
+    var toAddress = $('#VOTETransferAddress').val();
 
-    console.log('Transfer ' + amount + ' TT to ' + toAddress);
+    console.log('Transfer ' + amount + ' VOTE to ' + toAddress);
 
     var voteTokenInstance;
 
@@ -89,7 +89,7 @@ App = {
       }).then(function(result) {
         balance = result.c[0];
 
-        $('#TTBalance').text(balance);
+        $('#VOTEBalance').text(balance);
       }).catch(function(err) {
         console.log(err.message);
       });
