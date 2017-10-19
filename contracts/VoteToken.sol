@@ -19,7 +19,7 @@ contract VoteToken is MintableToken {
 	string public name = 'Democracy Earth VOTE';
 	string public symbol = 'VOTE';
 	uint public decimals = 4;
-	uint public INITIAL_SUPPLY = 20000000 * 10**unit256(decimals); // 20 Million votes specfied in revolutions
+	uint public INITIAL_SUPPLY = 20000000 * 10**uint256(decimals); // 20 Million votes specfied in revolutions
 
   function VoteToken() {
     totalSupply = INITIAL_SUPPLY;
