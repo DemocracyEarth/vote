@@ -1,5 +1,5 @@
 pragma solidity ^0.4.18;
-import 'zeppelin-solidity/contracts/token/ERC20/MintableToken.sol';
+import 'zeppelin-solidity/contracts/token/ERC20/StandardToken.sol';
 
 /**
  * @title Democracy Earth Token
@@ -15,14 +15,14 @@ import 'zeppelin-solidity/contracts/token/ERC20/MintableToken.sol';
  * 20 Million vote (total supply) is equivalent to
  * 200 Billion revolutions
  */
-contract VoteToken is MintableToken {
+contract VoteToken is StandardToken {
 	string public name = 'Democracy Earth VOTE';
 	string public symbol = 'VOTE';
 	uint public decimals = 4;
 	uint public INITIAL_SUPPLY = 20000000 * 10**uint256(decimals); // 20 Million votes specfied in revolutions
 
-  function VoteToken() {
+  function VoteToken(address initialAccount) {
     totalSupply_ = INITIAL_SUPPLY;
-    balances[msg.sender] = INITIAL_SUPPLY;
+    balances[initialAccount] = INITIAL_SUPPLY;
   }
 }
